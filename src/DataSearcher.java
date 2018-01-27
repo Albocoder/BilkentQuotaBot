@@ -65,7 +65,7 @@ public class DataSearcher extends OfferingsReader {
 
 			// parse course code
 			String courseCode = data.get(0).text();
-			String dept = courseCode.substring(0,courseCode.indexOf(" "));
+			String dept = super.getID().toUpperCase();//courseCode.substring(0,courseCode.indexOf(" "));
 			int c = Integer.parseInt(courseCode.substring(courseCode.indexOf(" ")+1,courseCode.indexOf("-")));
 			int s = Integer.parseInt(courseCode.substring(courseCode.indexOf("-")+1));
 
@@ -109,8 +109,8 @@ public class DataSearcher extends OfferingsReader {
 
 		if(rownumbersinglesearch != -1) {
 			Elements data = tableRows.get(rownumbersinglesearch).children();
-			String courseCode = data.get(0).text();
-			String dept = courseCode.substring(0,courseCode.indexOf(" "));
+//			String courseCode = data.get(0).text();
+			String dept = super.getID().toUpperCase();//courseCode.substring(0,courseCode.indexOf(" "));
 			String courseName = data.get(1).text();
 			String courseInstructor = data.get(2).text();
 			String courseCredits = data.get(3).text();
@@ -149,11 +149,11 @@ public class DataSearcher extends OfferingsReader {
 			int s = Integer.parseInt(courseCode.substring(courseCode.indexOf("-")+1));
 
 			// check exit conditions
-			if (code < c)
+			if (c < code)
 				continue;
 			else if (code == c && section != s)
 				continue;
-			else if (code > c)
+			else if (c > code)
 				return null;
 
 			// this happens only when code == c and section == s
@@ -207,11 +207,11 @@ public class DataSearcher extends OfferingsReader {
 			int s = Integer.parseInt(courseCode.substring(courseCode.indexOf("-")+1));
 
 			// check exit conditions
-			if (code < c)
+			if (c < code)
 				continue;
 			else if (code == c && section != s)
 				continue;
-			else if (code > c)
+			else if (c > code)
 				return -1;
 
 			// this happens only when code == c and section == s
@@ -226,4 +226,6 @@ public class DataSearcher extends OfferingsReader {
 	public int getCode() { return code; }
 	public int getSection() { return section; }
 	public String getWebsite() { return websiteContents; }
+	@Override
+	public String getID() { return super.getID()+" "+code+"-"+section; }
 }

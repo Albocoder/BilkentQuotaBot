@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<author>Erin "Albocoder" Avllazagaj</author>
+	<comment> This is a demo config.xml file. Please replace the cookie with your cookie and targets with yours. I'm giving 3 targets just as a demonstration. You can have hundreds! Please drop a star in my repo if you like this: https://github.com/Albocoder/BilkentQuotaBot </comment>
+
+
+	<cookie>homua9kagouivkfplkikoc1nj4</cookie>
+	<targets>
+		<target>
+			<dept>CS</dept>
+			<code>528</code>
+			<sect>1</sect>
+		</target>
+		<target>
+			<dept>EEE</dept>
+			<code>202</code>
+			<sect>1</sect>
+		</target>
+		<target>
+			<dept>EEE</dept>
+			<code>202</code>
+			<sect>2</sect>
+		</target>
+	</targets>
+</config>
