@@ -17,7 +17,7 @@ This is getting updated to handle the meaningless captcha block by BCC also uses
 9. Open terminal from same place as where you have the jar and xml and run the program with the following command <i>java -jar quotabot.jar</i>
 10. Happy botting! And drop me a star if you like it :)
 
-### Demo video: https://www.youtube.com/watch?v=zoNKR1WA3e8
+### Demo video: https://youtu.be/Wuu9U1wgHBQ
 
 # Disclaimer
 This is a side project I came up with. It's intended for educational purposes only. Use it at your own risk. I'm not held responsible by any use of this software.
